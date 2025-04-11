@@ -3,8 +3,8 @@ Member of group <br>
 <table>
 <tr> <strong> <th>Sn</th> <th>Names</th>  <th>Registration Number</th> </strong> </tr>
 <td>1.</td> <td>BYIRINGIRO Placide </td> <td>2409001287</td>
-2. NDAHAYO Pierre Celestin  2401001190
-3. Charlotte Divine DUSENGE  2405001125
-4. Egide NISINGIZWE          2309000807
-5. Bertin NIYONGENZI    2309000220
+<td>2.</td> <td>NDAHAYO Pierre Celestin</td>  <td>2401001190</td>
+<td>3.</td> <td>Charlotte Divine DUSENGE</td>  <td>2405001125</td>
+<td>4.</td> <td>Egide NISINGIZWE</td>         <td>2309000807</td>
+<td>5.</td> <td>Bertin NIYONGENZI</td>    <td>2309000220</td>
 </table>
