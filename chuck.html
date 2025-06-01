@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adding Profile</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div style="margin:auto; border:1px solid #ccc; padding:20px; width:400px;">
+        <h2>Adding Profile for Chuck</h2>
+
+        <form id="profileForm" method="POST" action="text.php">
+            First Name:<br>
+            <input type="text" name="first_name" required><br><br>
+
+            Last Name:<br>
+            <input type="text" name="last_name" required><br><br>
+
+            Email:<br>
+            <input type="email" name="email" required><br><br>
+
+            Headline:<br>
+            <input type="text" name="headline" required><br><br>
+
+            Summary:<br>
+            <textarea name="summary" rows="4" cols="40" required></textarea><br><br>
+
+            Position:<br>
+            <select name="position" id="position" required>
+                <option value="">+</option>
+                <option value="manager">Manager</option>
+                <option value="developer">Developer</option>
+                <option value="analyst">Analyst</option>
+                <option value="designer">Designer</option>
+            </select><br><br>
+
+            Year:<br>
+            <select name="year" id="year" required>
+                <option value="">+</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+            </select><br><br>
+
+            Description:<br>
+            <textarea name="description" rows="4" cols="40"></textarea><br><br>
+
+            <input type="submit" value="Add">
+            <button type="reset">Cancel</button>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#profileForm').on('submit', function (e) {
+                var position = $('#position').val();
+                var year = $('#year').val();
+
+                if (position === '' || year === '') {
+                    alert("Please select a valid Position and Year.");
+                    e.preventDefault(); // prevent form submission
+                }
+            });
+        });
+    </script>
+</body>
+</html>

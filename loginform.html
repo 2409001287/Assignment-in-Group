@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .header {
+      background-color: #007BFF;
+      padding: 40px;
+      text-align: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .login-box {
+      width: 300px;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .login-box h3 {
+      margin-bottom: 15px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .login-box button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      width: 100%;
+      border-radius: 4px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .login-box button:hover {
+      background-color: #0056b3;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .extra-buttons {
+      text-align: center;
+      margin-top: 500px; /* Adjust this to place it visually below login box */
+    }
+
+    .extra-buttons button {
+      margin: 5px;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .extra-buttons button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">Login</div>
+
+  <!-- Login Box -->
+  <div class="login-box">
+    <h3>Login successful</h3>
+    <input type="text" id="username" placeholder="Username |you password">
+    <input type="password" id="password" placeholder="Login password">
+    <button onclick="login()">Login</button>
+    <button onclick="cancelLogin()">Cancel</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <!-- Extra Demo Buttons -->
+  <div class="extra-buttons">
+    <button onclick="alert('Login successful! This is just a test button.')">Login successful</button>
+    <button onclick="alert('This is a login alert! Used for testing.')">Login alert</button>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const message = document.getElementById('message');
+
+      // Demo credentials
+      const correctUsername = 'admin';
+      const correctPassword = 'admin123';
+
+      if (username === correctUsername && password === correctPassword) {
+        message.style.color = 'green';
+        message.textContent = 'Login successful!';
+      } else {
+        message.style.color = 'red';
+        message.textContent = 'Invalid username or password.';
+      }
+    }
+
+    function cancelLogin() {
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+      document.getElementById('message').textContent = '';
+    }
+  </script>
+
+</body>
+</html>
